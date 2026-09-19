@@ -8,6 +8,14 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#e9c349","primary-container":"#e52020","surface-container":"#1e2023","surface-container-low":"#1a1c1f","on-error":"#690005","secondary":"#e9c349","primary":"#ffb4aa","on-primary-fixed":"#410001","tertiary-fixed-dim":"#4edea3","primary-fixed-dim":"#ffb4aa","on-tertiary-fixed":"#002113","inverse-primary":"#c0000f","error":"#ffb4ab","surface-container-highest":"#333538","on-tertiary":"#003824","tertiary-container":"#00865c","on-surface-variant":"#e7bdb7","secondary-fixed":"#ffe088","on-tertiary-container":"#fafff9","error-container":"#93000a","on-secondary":"#3c2f00","background":"#111317","surface-container-high":"#282a2d","inverse-surface":"#e2e2e6","on-primary":"#690004","on-primary-fixed-variant":"#930008","outline-variant":"#5d3f3b","surface-tint":"#ffb4aa","surface-bright":"#37393d","on-secondary-fixed":"#241a00","on-surface":"#e2e2e6","primary-fixed":"#ffdad5","tertiary-fixed":"#6ffbbe","outline":"#ae8883","on-background":"#e2e2e6","inverse-on-surface":"#2f3034","surface-container-lowest":"#0c0e11","on-secondary-fixed-variant":"#574500","tertiary":"#4edea3","surface":"#111317","on-secondary-container":"#342800","on-error-container":"#ffdad6","surface-variant":"#333538","secondary-container":"#af8d11","surface-dim":"#111317","on-primary-container":"#fffdff","on-tertiary-fixed-variant":"#005236"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin-desktop":"4rem","space-md":"1rem","space-sm":"0.5rem","gutter":"1rem","space-xl":"2.5rem","margin":"1rem","gutter-desktop":"1.5rem","margin-tablet":"2rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"26px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}};</script>
 <style>body { min-height: max(884px, 100dvh); }</style>
+<style>
+.dish-photo{cursor:zoom-in;}
+.lightbox-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;background-color:rgba(0,0,0,0);transition:opacity .35s ease,background-color .35s ease;}
+.lightbox-overlay.is-open{opacity:1;pointer-events:auto;background-color:rgba(0,0,0,.88);}
+.lightbox-overlay img{max-width:min(92vw,900px);max-height:88vh;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5);transition:transform .38s cubic-bezier(.22,1,.36,1),opacity .28s ease;}
+.lightbox-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:9999px;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;opacity:0;transition:opacity .25s ease;}
+.lightbox-overlay.is-open .lightbox-close{opacity:1;}
+</style>
 </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen relative">
 
 <header class="sticky top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high transition-all">
@@ -80,7 +88,7 @@
 <section class="px-gutter py-space-md flex flex-col gap-space-md" id="platillo-estrella">
 <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col">
 <div class="relative w-full aspect-[4/3] bg-surface-container">
-<img alt="Rollo Fuku" class="w-full h-full object-cover" src="images/fuku-hero.jpg">
+<img alt="Rollo Fuku" class="w-full h-full object-cover dish-photo" src="images/fuku-hero.jpg">
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/30 to-transparent"></div>
 <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-3 py-1 rounded-full flex items-center gap-1 shadow-md"><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Platillo estrella</span></div>
 <div class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full"><span class="font-label-lg text-label-lg text-secondary font-bold">$180</span></div>
@@ -129,7 +137,7 @@
   </div>
 </div>
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <img class="w-16 h-16 rounded-lg object-cover shrink-0" src="images/camanroll.jpg" alt="Camanroll">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/camanroll.jpg" alt="Camanroll">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
       <span class="font-label-lg text-label-lg text-on-surface font-bold">Camanroll</span>
@@ -366,7 +374,7 @@
   </div>
 </div>
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <img class="w-16 h-16 rounded-lg object-cover shrink-0" src="images/toro-horneado.jpg" alt="Toro horneado">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/toro-horneado.jpg" alt="Toro horneado">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
       <span class="font-label-lg text-label-lg text-on-surface font-bold">Toro horneado</span>
@@ -473,7 +481,7 @@
   </div>
 </div>
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <img class="w-16 h-16 rounded-lg object-cover shrink-0" src="images/toxica-burger.jpg" alt="La Tóxica">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/toxica-burger.jpg" alt="La Tóxica">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
       <span class="font-label-lg text-label-lg text-on-surface font-bold">La Tóxica</span>
@@ -580,7 +588,7 @@
   <div class="px-space-md pb-space-md pt-0 flex flex-col">
     
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <img class="w-16 h-16 rounded-lg object-cover shrink-0" src="images/alitas.jpg" alt="Alitas">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/alitas.jpg" alt="Alitas">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
       <span class="font-label-lg text-label-lg text-on-surface font-bold">Alitas</span>
@@ -699,8 +707,8 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">Para la reunión familiar, la oficina o la banda completa. Se piden con anticipación.</p>
 </div>
 <div class="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
-<img class="w-full h-28 object-cover rounded-lg" alt="Charola de sushi" src="images/charola-sushi.jpg">
-<img class="w-full h-28 object-cover rounded-lg" alt="Charola surtida" src="images/charola-surtida.jpg">
+<img class="w-full h-28 object-cover rounded-lg dish-photo" alt="Charola de sushi" src="images/charola-sushi.jpg">
+<img class="w-full h-28 object-cover rounded-lg dish-photo" alt="Charola surtida" src="images/charola-surtida.jpg">
 </div>
 
 <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-md">
@@ -756,7 +764,7 @@
   </div>
 </div>
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <img class="w-16 h-16 rounded-lg object-cover shrink-0" src="images/charola-alitas.jpg" alt="Charola alitas">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/charola-alitas.jpg" alt="Charola alitas">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
       <span class="font-label-lg text-label-lg text-on-surface font-bold">Charola alitas</span>
@@ -909,6 +917,11 @@
 </a>
 </aside>
 
+<div id="lightbox-overlay" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+<button id="lightbox-close" type="button" class="lightbox-close" aria-label="Cerrar imagen"><span class="material-symbols-outlined" style="font-size:22px;">close</span></button>
+<img id="lightbox-img" src="" alt="">
+</div>
+
 <script>
 function toggleMobileNav() {
   const drawer = document.getElementById('mobile-nav-drawer');
@@ -963,6 +976,69 @@ function updateOpenStatus() {
 }
 updateOpenStatus();
 setInterval(updateOpenStatus, 60000);
+
+// Lightbox de fotos de platillos: se abre con animación de "maximizar" desde la miniatura
+// y se cierra "minimizando" de vuelta al mismo lugar, superpuesto sobre la misma página.
+(function () {
+  const overlay = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+  if (!overlay || !lightboxImg || !closeBtn) return;
+  let lastTrigger = null;
+
+  function openLightbox(sourceImg) {
+    lastTrigger = sourceImg;
+    lightboxImg.src = sourceImg.currentSrc || sourceImg.src;
+    lightboxImg.alt = sourceImg.alt || '';
+    overlay.classList.add('is-open');
+    document.documentElement.style.overflow = 'hidden';
+
+    const sourceRect = sourceImg.getBoundingClientRect();
+    lightboxImg.style.transition = 'none';
+    lightboxImg.style.opacity = '1';
+    lightboxImg.style.transform = 'none';
+    const finalRect = lightboxImg.getBoundingClientRect();
+
+    const scale = finalRect.width ? sourceRect.width / finalRect.width : 0.3;
+    const dx = sourceRect.left + sourceRect.width / 2 - (finalRect.left + finalRect.width / 2);
+    const dy = sourceRect.top + sourceRect.height / 2 - (finalRect.top + finalRect.height / 2);
+
+    lightboxImg.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+    void lightboxImg.offsetWidth;
+    requestAnimationFrame(() => {
+      lightboxImg.style.transition = '';
+      lightboxImg.style.transform = 'translate(0px, 0px) scale(1)';
+    });
+  }
+
+  function closeLightbox() {
+    if (!overlay.classList.contains('is-open')) return;
+    const finalRect = lightboxImg.getBoundingClientRect();
+    if (lastTrigger) {
+      const sourceRect = lastTrigger.getBoundingClientRect();
+      const scale = finalRect.width ? sourceRect.width / finalRect.width : 0.3;
+      const dx = sourceRect.left + sourceRect.width / 2 - (finalRect.left + finalRect.width / 2);
+      const dy = sourceRect.top + sourceRect.height / 2 - (finalRect.top + finalRect.height / 2);
+      lightboxImg.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+    } else {
+      lightboxImg.style.transform = 'scale(0.3)';
+    }
+    lightboxImg.style.opacity = '0';
+    overlay.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+    lastTrigger = null;
+  }
+
+  document.querySelectorAll('.dish-photo').forEach((el) => {
+    el.addEventListener('click', () => openLightbox(el));
+  });
+  lightboxImg.addEventListener('click', closeLightbox);
+  closeBtn.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeLightbox();
+  });
+})();
 </script>
 
 </body></html>

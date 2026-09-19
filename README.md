@@ -9,7 +9,8 @@
 2. Ponlo dentro de la carpeta `images/`
 3. En `index.html`, busca el bloque del platillo (Ctrl+F con el nombre del platillo) y donde dice
    `<div class="w-16 h-16 ... text-2xl shrink-0">🍣</div>` (el emoji placeholder),
-   cámbialo por: `<img class="w-16 h-16 rounded-lg object-cover shrink-0" src="images/nombre-del-archivo.jpg" alt="nombre del platillo">`
+   cámbialo por: `<img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/nombre-del-archivo.jpg" alt="nombre del platillo">`
+   (la clase `dish-photo` es la que activa el efecto de imagen ampliada al hacer clic — no la quites)
 
 ## Fotos ya incluidas
 fuku-hero.jpg · charola-sushi.jpg · charola-alitas.jpg · camanroll.jpg ·
