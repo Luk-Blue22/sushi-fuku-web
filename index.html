@@ -50,7 +50,7 @@
 </div>
 </header>
 
-<main class="flex flex-col relative w-full pb-12 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<main class="flex flex-col relative w-full pb-12 bg-surface"><div class="flex flex-col w-full md:max-w-2xl md:mx-auto text-on-surface">
 
 <!-- HERO -->
 <section class="relative px-gutter pt-space-xl pb-space-lg flex flex-col items-center text-center overflow-hidden">
@@ -65,8 +65,8 @@
   <span id="status-text" class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Comprobando horario…</span>
 </div>
 
-<div class="relative z-10 w-24 h-24 rounded-full overflow-hidden shadow-xl bg-surface-container-high mb-space-md flex items-center justify-center border border-outline-variant/40">
-  <img class="w-full h-full object-contain p-2" src="images/logo-fuku.png" alt="Sushi Fuku">
+<div class="relative z-10 w-36 h-36 mb-space-md flex items-center justify-center">
+  <img class="w-full h-full object-contain" src="images/logo-fuku.png" alt="Sushi Fuku">
 </div>
 
 <h1 class="relative z-10 font-display-hero-mobile text-display-hero-mobile text-on-surface tracking-tight font-extrabold mb-space-xs">Sushi Fuku</h1>
@@ -622,7 +622,7 @@
       <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-[22px]">star</span></div>
       <div class="flex flex-col">
         <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Especiales</h3>
-        <span class="font-label-sm text-label-sm text-on-surface-variant">5 opciones · $120 – $185</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">7 opciones · $120 – $185</span>
       </div>
     </div>
     <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 group-open:rotate-180">expand_more</span>
@@ -656,7 +656,7 @@
   </div>
 </div>
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <div class="w-16 h-16 rounded-lg bg-surface-container-high flex items-center justify-center text-2xl shrink-0">⭐</div>
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/bomba.jpg" alt="Bomba">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
       <span class="font-label-lg text-label-lg text-on-surface font-bold">Bomba</span>
@@ -682,14 +682,40 @@
   </div>
 </div>
 <div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
-  <div class="w-16 h-16 rounded-lg bg-surface-container-high flex items-center justify-center text-2xl shrink-0">⭐</div>
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/ensalada-plancha.jpg" alt="Ensalada a la plancha">
   <div class="flex-1 flex flex-col gap-0.5 min-w-0">
     <div class="flex items-baseline justify-between gap-2">
-      <span class="font-label-lg text-label-lg text-on-surface font-bold">Ensalada</span>
+      <span class="font-label-lg text-label-lg text-on-surface font-bold">Ensalada a la plancha</span>
       <span class="font-label-lg text-label-lg text-secondary font-extrabold shrink-0">$125</span>
     </div>
-    <p class="font-body-sm text-body-sm text-on-surface-variant">Pollo a la plancha o empanizado, lechuga, zanahoria, pepino, tomate y fritura ranch.</p>
-    <a class="self-start mt-1 h-7 px-3 rounded-lg bg-surface-container-high text-secondary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="https://wa.me/526672432118?text=Hola%20Sushi%20Fuku%2C%20quiero%20pedir%201%20Ensalada%20%28%24125%29" rel="noopener noreferrer" target="_blank">
+    <p class="font-body-sm text-body-sm text-on-surface-variant">Pollo a la plancha, lechuga, zanahoria, pepino, tomate y fritura ranch.</p>
+    <a class="self-start mt-1 h-7 px-3 rounded-lg bg-surface-container-high text-secondary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="https://wa.me/526672432118?text=Hola%20Sushi%20Fuku%2C%20quiero%20pedir%201%20Ensalada%20a%20la%20plancha%20%28%24125%29" rel="noopener noreferrer" target="_blank">
+      <span class="material-symbols-outlined text-[14px]">chat</span> Pedir
+    </a>
+  </div>
+</div>
+<div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/ensalada-empanizado.jpg" alt="Ensalada empanizada">
+  <div class="flex-1 flex flex-col gap-0.5 min-w-0">
+    <div class="flex items-baseline justify-between gap-2">
+      <span class="font-label-lg text-label-lg text-on-surface font-bold">Ensalada empanizada</span>
+      <span class="font-label-lg text-label-lg text-secondary font-extrabold shrink-0">$125</span>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface-variant">Pollo empanizado, lechuga, zanahoria, pepino, tomate y fritura ranch.</p>
+    <a class="self-start mt-1 h-7 px-3 rounded-lg bg-surface-container-high text-secondary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="https://wa.me/526672432118?text=Hola%20Sushi%20Fuku%2C%20quiero%20pedir%201%20Ensalada%20empanizada%20%28%24125%29" rel="noopener noreferrer" target="_blank">
+      <span class="material-symbols-outlined text-[14px]">chat</span> Pedir
+    </a>
+  </div>
+</div>
+<div class="flex gap-3 py-3 border-b border-surface-variant/25 last:border-b-0">
+  <img class="w-16 h-16 rounded-lg object-cover shrink-0 dish-photo" src="images/chiles-rellenos.jpg" alt="Chiles rellenos">
+  <div class="flex-1 flex flex-col gap-0.5 min-w-0">
+    <div class="flex items-baseline justify-between gap-2">
+      <span class="font-label-lg text-label-lg text-on-surface font-bold">Chiles rellenos</span>
+      <span class="font-label-lg text-label-lg text-secondary font-extrabold shrink-0">$130</span>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface-variant">Chiles rellenos preparados al estilo de la casa.</p>
+    <a class="self-start mt-1 h-7 px-3 rounded-lg bg-surface-container-high text-secondary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="https://wa.me/526672432118?text=Hola%20Sushi%20Fuku%2C%20quiero%20pedir%201%20Chiles%20rellenos%20%28%24130%29" rel="noopener noreferrer" target="_blank">
       <span class="material-symbols-outlined text-[14px]">chat</span> Pedir
     </a>
   </div>
