@@ -50,10 +50,11 @@
 </div>
 </header>
 
-<main class="flex flex-col relative w-full pb-12 bg-surface"><div class="flex flex-col w-full md:max-w-2xl md:mx-auto text-on-surface">
+<main class="flex flex-col relative w-full pb-12 bg-surface"><div class="flex flex-col w-full md:max-w-2xl md:mx-auto lg:max-w-5xl text-on-surface">
 
+<div class="lg:flex lg:flex-row lg:items-start lg:gap-10">
 <!-- HERO -->
-<section class="relative px-gutter pt-space-xl pb-space-lg flex flex-col items-center text-center overflow-hidden">
+<section class="relative px-gutter pt-space-xl pb-space-lg flex flex-col items-center text-center overflow-hidden lg:flex-1 lg:items-start lg:text-left lg:py-space-xl">
 <div class="absolute -top-12 -right-16 w-56 h-56 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
 <div class="absolute top-44 -left-20 w-48 h-48 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -85,7 +86,7 @@
 </section>
 
 <!-- PLATILLO ESTRELLA -->
-<section class="px-gutter py-space-md flex flex-col gap-space-md" id="platillo-estrella">
+<section class="px-gutter py-space-md flex flex-col gap-space-md lg:flex-1 lg:self-center" id="platillo-estrella">
 <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col">
 <div class="relative w-full aspect-[4/3] bg-surface-container">
 <img alt="Rollo Fuku" class="w-full h-full object-cover dish-photo" src="images/fuku-hero.jpg">
@@ -100,6 +101,7 @@
 </div>
 </div>
 </section>
+</div>
 
 <!-- LA CARTA -->
 <section class="px-gutter py-space-md flex flex-col gap-space-md" id="carta">
@@ -108,7 +110,7 @@
 <h2 class="font-headline-md text-headline-md text-on-surface font-extrabold">Menú completo</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Toca una categoría para ver todas las opciones, precio y descripción.</p>
 </div>
-<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-space-sm lg:grid lg:grid-cols-2 lg:gap-4 lg:items-start">
 
 <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-md">
   <summary class="list-none cursor-pointer flex items-center justify-between p-space-md select-none">
@@ -733,8 +735,8 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">Para la reunión familiar, la oficina o la banda completa. Se piden con anticipación.</p>
 </div>
 <div class="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
-<img class="w-full h-28 object-cover rounded-lg dish-photo" alt="Charola de sushi" src="images/charola-sushi.jpg">
-<img class="w-full h-28 object-cover rounded-lg dish-photo" alt="Charola surtida" src="images/charola-surtida.jpg">
+<img class="w-full h-28 lg:h-56 object-cover rounded-lg dish-photo" alt="Charola de sushi" src="images/charola-sushi.jpg">
+<img class="w-full h-28 lg:h-56 object-cover rounded-lg dish-photo" alt="Charola surtida" src="images/charola-surtida.jpg">
 </div>
 
 <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-md">
@@ -847,7 +849,7 @@
 <a class="h-9 px-3 rounded-lg bg-surface-container-high text-secondary font-label-sm text-label-sm flex items-center gap-1 shrink-0" href="https://www.google.com/maps/place/?q=place_id:ChIJAwiaX77PvIYR8kwx71yKSqE" rel="noopener noreferrer" target="_blank">Ver todas</a>
 </div>
 
-<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-space-sm lg:grid lg:grid-cols-3 lg:gap-4">
 <div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-2">
 <div class="flex items-center justify-between"><div class="flex text-secondary text-[14px]"><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span></div><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path></svg></div>
 <p class="font-body-md text-body-md text-on-surface-variant italic">"El sushi es fantástico, muy bien sazonado y rinde bastante, como a todo culichi le gusta en su plato."</p>
@@ -871,10 +873,11 @@
 <!-- UBICACIÓN -->
 <section class="px-gutter py-space-md flex flex-col gap-space-md" id="ubicacion">
 <div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Encuéntranos</span><h2 class="font-headline-md text-headline-md text-on-surface font-extrabold">Ubicación y horarios</h2></div>
-<a class="relative w-full h-32 rounded-xl overflow-hidden shadow-lg bg-surface-container-low flex items-center justify-center gap-2 hover:bg-surface-container transition-colors" href="https://www.google.com/maps/search/?api=1&query=Sushi+Fuku+Aguaruto+Culiacan" rel="noopener noreferrer" target="_blank">
+<div class="flex flex-col gap-space-md lg:flex-row lg:items-stretch lg:gap-4">
+<a class="relative w-full h-32 lg:h-auto lg:flex-1 rounded-xl overflow-hidden shadow-lg bg-surface-container-low flex items-center justify-center gap-2 hover:bg-surface-container transition-colors" href="https://www.google.com/maps/search/?api=1&query=Sushi+Fuku+Aguaruto+Culiacan" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-primary-container text-[26px]">pin_drop</span><span class="font-label-md text-label-md text-secondary font-bold">Abrir en Google Maps</span>
 </a>
-<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm lg:flex-1">
 <div class="flex items-start gap-3"><div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0"><span class="material-symbols-outlined text-[20px]">location_on</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-bold">Dirección</span><span class="font-body-sm text-body-sm text-on-surface-variant">Adolfo López Mateos 70, Aguaruto, Culiacán, Sinaloa, C.P. 80308</span></div></div>
 <div class="flex items-start gap-3"><div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0"><span class="material-symbols-outlined text-[20px]">schedule</span></div>
 <div class="flex flex-col w-full gap-1"><span class="font-label-md text-label-md text-on-surface font-bold">Horario de servicio</span>
@@ -882,6 +885,7 @@
 <div class="flex justify-between items-center py-1 bg-surface-container-high/40 px-2 rounded"><span class="font-body-sm text-body-sm text-on-surface">Viernes y sábado:</span><span class="font-label-sm text-label-sm text-secondary font-semibold">1:00 PM – 10:00 PM</span></div>
 <div class="flex justify-between items-center py-1 bg-surface-container-high/40 px-2 rounded"><span class="font-body-sm text-body-sm text-on-surface-variant">Domingo:</span><span class="font-label-sm text-label-sm text-error font-semibold">Cerrado</span></div>
 </div></div>
+</div>
 </div>
 </section>
 
